@@ -1,4 +1,3 @@
- FROM ibmfunctions/action-python-v3.7
-
+ FROM python:3.7-alpine
  RUN pip install pyjokes 
 

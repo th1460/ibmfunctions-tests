@@ -1,6 +1,8 @@
 # IBM Functions Tests
 
-## Python example with virtual environment
+## Python example
+
+### Virtual environment
 
 ```
 # access the folder
@@ -26,7 +28,7 @@ zip -r jokes.zip virtualenv __main__.py
 ibmcloud fn action create jokes jokes.zip --kind python:3.7 --main joke
 ```
 
-## Python example with docker
+### Docker
 
 ```
 # access the folder
@@ -40,6 +42,12 @@ docker push th1460/jokes
 
 # deploy cloud function
 ibmcloud fn action create jokes --docker docker.io/th1460/jokes __main__.py --main joke
+```
+
+### Invoke the action
+
+```
+ibmcloud fn action invoke jokes --result
 ```
 
 ## References
